@@ -3,6 +3,7 @@ package com.example.ms_pscinas.entitys;
 import jakarta.persistence.*;
 import lombok.Data;
 
+import java.sql.Date;
 import java.sql.Timestamp;
 
 @Entity
@@ -12,7 +13,7 @@ public class Pagamentos {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Long id_pagamentos;
 
     @ManyToOne
     @JoinColumn(name = "id_cliente", referencedColumnName = "id_cliente")
@@ -20,5 +21,5 @@ public class Pagamentos {
 
     private int dia_prevista;
 
-    private Timestamp data_pagamento;
+    private Date data_pagamento;
 }
