@@ -5,6 +5,7 @@ import jakarta.persistence.*;
 import lombok.Data;
 
 import java.util.List;
+import java.util.Set;
 
 @Entity
 @Data
@@ -24,7 +25,7 @@ public class Clientes {
 
     private int quantidade_visitas;
 
-    @OneToMany(mappedBy = "id_cliente", fetch = FetchType.EAGER, cascade = CascadeType.ALL)
-    @JsonIgnoreProperties("id_cliente")
+    @OneToMany(mappedBy = "cliente", fetch = FetchType.EAGER)
+    @JsonIgnoreProperties("cliente")
     private List<Pagamentos> pagamentos;
 }
