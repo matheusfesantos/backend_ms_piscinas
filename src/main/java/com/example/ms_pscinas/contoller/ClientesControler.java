@@ -2,6 +2,7 @@ package com.example.ms_pscinas.contoller;
 
 import com.example.ms_pscinas.entitys.Clientes;
 import com.example.ms_pscinas.services.ClientesServices;
+import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

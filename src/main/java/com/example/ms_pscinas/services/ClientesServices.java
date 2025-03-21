@@ -2,6 +2,7 @@ package com.example.ms_pscinas.services;
 
 import com.example.ms_pscinas.entitys.Clientes;
 import com.example.ms_pscinas.repository.ClientesRepos;
+import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -13,6 +14,7 @@ public class ClientesServices {
     @Autowired
     private ClientesRepos clientesRepos;
 
+    @Transactional
     public List<Clientes> getTodosClientes(){
         return clientesRepos.findAll();
     }

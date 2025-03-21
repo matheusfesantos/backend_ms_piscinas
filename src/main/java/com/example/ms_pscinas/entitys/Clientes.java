@@ -24,7 +24,7 @@ public class Clientes {
 
     private int quantidade_visitas;
 
-    @OneToMany(mappedBy = "id_cliente", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "id_cliente", fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     @JsonIgnoreProperties("id_cliente")
     private List<Pagamentos> pagamentos;
 }

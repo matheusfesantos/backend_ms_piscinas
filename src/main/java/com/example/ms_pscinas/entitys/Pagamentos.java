@@ -22,4 +22,6 @@ public class Pagamentos {
     private int dia_prevista;
 
     private Date data_pagamento;
+
+    private double valor_pago;
 }
