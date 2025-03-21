@@ -1,5 +1,6 @@
 package com.example.ms_pscinas.entitys;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 import lombok.Data;
 
@@ -15,9 +16,9 @@ public class Pagamentos {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id_pagamentos;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "id_cliente", referencedColumnName = "id_cliente")
-    private Clientes id_cliente;
+    private Clientes cliente;
 
     private int dia_prevista;
 

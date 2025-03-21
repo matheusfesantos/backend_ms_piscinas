@@ -29,4 +29,9 @@ public class ClientesControler {
     public Clientes postCliente(@RequestBody Clientes cliente){
         return clientesServices.postSalvarCliente(cliente);
     }
+
+    @DeleteMapping("/{id_cliente}")
+    public Clientes deleteCliente(@PathVariable Long id_cliente){
+        return clientesServices.deleteCliente(id_cliente);
+    }
 }
