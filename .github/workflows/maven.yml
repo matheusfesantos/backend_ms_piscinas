@@ -23,8 +23,5 @@ jobs:
       - name: Set up Maven
         run: sudo apt-get install maven
 
-      - name: Build with Maven
-        run: mvn -B clean install --file pom.xml
-
       - name: Run tests with Maven
         run: mvn test
