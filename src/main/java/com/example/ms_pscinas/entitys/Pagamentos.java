@@ -14,7 +14,7 @@ public class Pagamentos {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id_pagamentos;
+    private Long id_pagamento;
 
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "id_cliente", referencedColumnName = "id_cliente")
